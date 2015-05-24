@@ -12,7 +12,17 @@ config = {
     production: {
         url: 'http://ghost-jahde.herokuapp.com',
         fileStorage: false,
-        mail: {},
+        mail: {
+            transport: 'SMTP',
+            host: 'smtp.mandrillapp.com',
+            options: {
+              service: 'Mandrill',
+              auth: {
+                user: process.env.MANDRILL_USERNAME,
+                pass: process.env.MANDRILL_APIKEY
+              }
+            }
+        },
         database: {
           client: 'postgres',
           connection: {
