@@ -10,7 +10,7 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        url: 'http://ghost-jahde.herokuapp.com',
+        url: 'http://code.jahde.co',
         fileStorage: false,
         mail: {
             transport: 'SMTP',
